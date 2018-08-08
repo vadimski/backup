@@ -58,7 +58,7 @@ echo " .. done"
 echo " .. sqldump'ing database:"
 echo "    user: $dbuser; database: $dbname; host: $dbhost"
 cd $startdir/$tempdir
-mysqldump -p=dbpass --user=$dbuser --host=$dbhost --add-drop-table $dbname > db.sql
+mysqldump -u $dbuser -p "$dbpass" --add-drop-table knowledgehub > db.sql
 echo " .. done"
 
 #
